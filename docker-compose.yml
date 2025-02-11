@@ -1,12 +1,11 @@
 version: '3.9'
 services:
   web:
-    image: python:3.9
+    build: .
     container_name: lacrei_web
     working_dir: /app
     volumes:
       - .:/app
-    command: bash -c "poetry install && poetry run python manage.py runserver 0.0.0.0:8000"
     ports:
       - "8000:8000"
     depends_on:

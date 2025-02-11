@@ -6,14 +6,14 @@ from .views import (
 )
 
 urlpatterns = [
-    path("consultas/", ConsultaListCreate.as_view(), name="consulta-list-create"),
+        path('', ConsultaListCreate.as_view(), name='consulta-list-create'),
     path(
-        "consultas/<int:pk>/",
+        "<int:pk>/",
         ConsultaRetrieveUpdateDestroy.as_view(),
         name="consulta-detail",
     ),
     path(
-        "consultas/profissional/<int:profissional_id>/",
+        "profissional/<int:profissional_id>/",
         ConsultaListByProfissional.as_view(),
         name="consulta-list-by-profissional",
     ),

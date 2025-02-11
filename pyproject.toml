@@ -1,20 +1,21 @@
-[project]
+[tool.poetry]
 name = "desafio-lacreisaude"
 version = "0.1.0"
 description = "API para gerenciamento de consultas médicas e profissionais de saúde"
-authors = [
-    {name = "ustavoteles",email = "telesgustavo.dev@gmail.com"}
-]
+authors = ["ustavoteles <telesgustavo.dev@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "djangorestframework (>=3.15.2,<4.0.0)",
-    "psycopg2-binary (>=2.9.10,<3.0.0)",
-    "pytest (>=8.3.4,<9.0.0)",
-    "pytest-django (>=4.9.0,<5.0.0)"
-]
 
+[tool.poetry.dependencies]
+python = "^3.12"
+djangorestframework = "^3.15.2"
+psycopg2-binary = "^2.9.10"
+pytest = "^8.3.4"
+pytest-django = "^4.9.0"
+drf_yasg = "^1.21.0"  
+django = "^5.1.6"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+package-mode = false
